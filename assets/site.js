@@ -12,10 +12,41 @@
   var film = document.getElementById("film");
   var video = document.getElementById("filmVideo");
   var play = document.getElementById("play");
+  var sound = document.getElementById("sound");
   if (!film || !video || !play) return;
+
+  // Sound on or off, remembered on this browser for next time. "Off" means nothing can be heard,
+  // whether the film is muted or its volume is at zero.
+  var key = "rightshot-film-muted";
+  function silent() { return video.muted || video.volume === 0; }
+  function show() {
+    var off = silent();
+    if (sound) {
+      sound.classList.toggle("off", off);
+      sound.querySelector("span").textContent = off ? "Sound off" : "Sound on";
+    }
+    try { localStorage.setItem(key, off ? "1" : "0"); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(key); } catch (e) {}
+  video.muted = saved === "1";
+  show();
+  if (sound) sound.addEventListener("click", function () {
+    if (silent()) {
+      if (video.volume === 0) video.volume = 1;
+      video.muted = false;
+    } else {
+      video.muted = true;
+    }
+  });
+  // Covers the button and the video's own mute and volume controls alike.
+  video.addEventListener("volumechange", show);
+
   play.addEventListener("click", function () {
     film.classList.add("playing");
     video.controls = true;
-    video.play();
+    var started = video.play();
+    // A browser may refuse or pause playback, for example in a background tab. The controls still work.
+    if (started && started.catch) started.catch(function () {});
   });
 })();
