@@ -93,6 +93,12 @@ a { color: inherit; }
 .play svg { width: 0.7em; height: 0.7em; }
 .play:hover { opacity: 0.85; }
 .film.playing .play { display: none; }
+.sound { position: absolute; right: 20px; top: 20px; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px 0 11px; border: 0; border-radius: var(--r-pill); background: rgba(11, 11, 12, 0.55); color: #fff; font: 500 14px/1 var(--font); cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.sound:hover { background: rgba(11, 11, 12, 0.72); }
+.sound svg { width: 18px; height: 18px; }
+.sound .cross { display: none; }
+.sound.off .cross { display: inline; }
+.sound.off .waves { display: none; }
 
 /* Sections */
 section.wrap { margin-top: 160px; scroll-margin-top: 84px; }
