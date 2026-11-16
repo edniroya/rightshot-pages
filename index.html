@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RightShot: right-drag to capture on Mac</title>
+<meta name="description" content="RightShot is a Mac screenshot and screen recording app. Hold the right mouse button and drag to capture, then edit and paste where you took it.">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-256.png">
+<meta property="og:title" content="RightShot: right-drag to capture on Mac">
+<meta property="og:description" content="Hold the right mouse button and drag. That's a screenshot.">
+<meta property="og:image" content="https://rightshot.edniroya.com/assets/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M8 16L16 8m0 0H9.5M16 8v6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M6 4l12.5 7.2-5.6 1.3-2.6 5.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rect" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19L18 6m0 0h-7m7 0v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-blur" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="7" cy="7" r="1.6"/><circle cx="12" cy="7" r="1.6"/><circle cx="17" cy="7" r="1.6"/><circle cx="7" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="17" cy="12" r="1.6"/><circle cx="7" cy="17" r="1.6"/><circle cx="12" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></g></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6h14M12 6v13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-crop" viewBox="0 0 24 24"><path d="M7 3v14h14M3 7h14v14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V5.5A1.5 1.5 0 0014.5 4h-9A1.5 1.5 0 004 5.5v9A1.5 1.5 0 005.5 16H8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5.5A1.5 1.5 0 015.5 4H8M16 4h2.5A1.5 1.5 0 0120 5.5V8M20 16v2.5a1.5 1.5 0 01-1.5 1.5H16M8 20H5.5A1.5 1.5 0 014 18.5V16M8 10h8M8 14h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-record" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="M18 9a7 7 0 10.5 6M18 4v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7.5A1.5 1.5 0 015 6h4l2 2h8a1.5 1.5 0 011.5 1.5v8A1.5 1.5 0 0119 19H5a1.5 1.5 0 01-1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10" r="1.6" fill="currentColor"/><path d="M4 17l5-5 4 4 2.5-2.5L20 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 4v16M16 4v16M4 9h4M4 15h4M16 9h4M16 15h4" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-stack" viewBox="0 0 24 24"><rect x="6" y="6" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 15V5.5A1.5 1.5 0 015.5 4H15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 7h10M10 12h10M10 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 6l1.5-1v4M4 12.5c.4-.8 2.5-1 2.4.2 0 .9-2.4 1.8-2.4 2.8h2.6M4.2 17h2.3l-1.2 1.2c1 0 1.5.5 1.2 1.3-.3.7-1.6.7-2.3.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="7" y="8" width="10" height="8" rx="1" fill="currentColor" opacity=".35"/></symbol>
+    <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M9 4.5a2 2 0 014 0V6h4a1 1 0 011 1v4h-1.5a2 2 0 000 4H18v4a1 1 0 01-1 1h-4v-1.5a2 2 0 00-4 0V20H5a1 1 0 01-1-1v-4h1.5a2 2 0 000-4H4V7a1 1 0 011-1h4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 018 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-256.png" alt="">RightShot</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#pro">Pro</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-soft" href="support.html">Support</a>
+      <a class="btn btn-dark" href="#download">Download</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <a class="pill-note" href="#download"><b>Coming soon</b> to the Mac App Store <span aria-hidden="true">&#8599;</span></a>
+    <h1>Meet <img src="assets/icon-512.png" alt=""> RightShot</h1>
+    <p class="lede">Hold the right mouse button and drag. That's a screenshot. Mark it up where you took it, and it's already on your clipboard.</p>
+    <div class="cta">
+      <a class="btn btn-dark btn-lg" href="#download"><svg aria-hidden="true"><use href="#i-down"/></svg>Download for macOS</a>
+      <a class="btn btn-soft btn-lg" href="#features">See what it does</a>
+    </div>
+
+    <div class="demo">
+      <div class="window" id="stage" role="img" aria-label="Animation: a pointer right-drags across a chart, a capture box appears, the annotation toolbar opens and the capture is copied.">
+        <div class="window-bar"><i></i><i></i><i></i><span class="title">Quarterly review</span></div>
+        <div class="doc">
+          <div class="doc-side"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="doc-main">
+            <div class="h"></div>
+            <div class="l"></div><div class="l s"></div>
+            <div class="chart-card" id="target">
+              <div class="t">Weekly sign-ups <em>Last 8 weeks</em></div>
+              <div class="bars"><b style="height:34%"></b><b style="height:48%"></b><b style="height:42%"></b><b style="height:61%"></b><b style="height:55%"></b><b style="height:72%"></b><b style="height:66%"></b><b style="height:90%"></b></div>
+            </div>
+          </div>
+        </div>
+        <div class="sel" id="sel"></div>
+        <svg class="arrow-mark" id="mark" width="80" height="60" viewBox="0 0 80 60" aria-hidden="true"><path d="M6 54C28 50 46 36 66 12" fill="none" stroke="#e2483d" stroke-width="4" stroke-linecap="round"/><path d="M52 12l15-1-2 15" fill="none" stroke="#e2483d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="toolbar" id="bar">
+          <span><svg><use href="#i-pointer"/></svg></span>
+          <span><svg><use href="#i-rect"/></svg></span>
+          <span id="arrowTool"><svg><use href="#i-arrow"/></svg></span>
+          <span><svg><use href="#i-blur"/></svg></span>
+          <span><svg><use href="#i-text"/></svg></span>
+          <span><svg><use href="#i-crop"/></svg></span>
+          <hr>
+          <span><svg><use href="#i-copy"/></svg></span>
+          <span><svg><use href="#i-check"/></svg></span>
+        </div>
+        <div class="toast" id="toast">Copied</div>
+        <div class="cursor" id="cursor">
+          <svg width="22" height="28" viewBox="0 0 22 28" aria-hidden="true"><path d="M2 2v21l5.5-5.2 3.7 8 3.6-1.6-3.6-7.8H19z" fill="#0b0b0c" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span class="tag">Right-drag</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap" id="features">
+    <div class="split">
+      <h2 class="big">Capture the way<br>you already point</h2>
+      <div>
+        <p>Other tools make you remember a shortcut, then aim. RightShot puts capture on the button your hand is already resting on. Right-drag over anything, let go, and it's copied.</p>
+        <p>A quick right-click still opens the menu you expect. Hold still instead, and RightShot's own menu opens beside the pointer.</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <article class="card">
+        <h3>Hold for the menu</h3>
+        <p>Keep the right button still for half a second and every capture is beside your pointer: area, window, full screen, text and recording.</p>
+        <div class="art">
+          <div class="menu-art" aria-hidden="true">
+            <small>RightShot</small>
+            <div class="on"><svg><use href="#i-scan"/></svg>Capture Area…</div>
+            <div><svg><use href="#i-window"/></svg>Capture Window…</div>
+            <div><svg><use href="#i-screen"/></svg>Capture Full Screen</div>
+            <div><svg><use href="#i-redo"/></svg>Capture Previous Area</div>
+            <hr>
+            <div><svg><use href="#i-record"/></svg>Record Area…</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Whole web pages, top to bottom</h3>
+        <p>The companion extension for Chrome, Brave and Edge captures a full page in one go, then opens it in the editor, ready to mark up.</p>
+        <div class="art">
+          <div class="page-art" aria-hidden="true">
+            <div class="ext"><b>RightShot</b><span class="on">Capture Full Page</span><span>Record This Tab…</span></div>
+            <div class="long"><i class="s"></i><i class="img"></i><i></i><i class="s"></i><i></i><i class="img"></i><i class="s"></i><i></i><i></i><i class="s"></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Mark it up where you took it</h3>
+        <p>Boxes, arrows, numbered steps, text, highlighter, blur and redact appear right under the capture. Every edit updates your clipboard.</p>
+        <div class="art">
+          <div class="tools-art" aria-hidden="true">
+            <div class="shot"><span class="row" style="top:22px;width:40%"></span><span class="row" style="top:42px;right:150px"></span><span class="row" style="top:60px;right:170px"></span><span class="blur"></span><span class="box"></span><span class="num">1</span></div>
+            <div class="bar"><span><svg><use href="#i-pointer"/></svg></span><span class="on"><svg><use href="#i-rect"/></svg></span><span><svg><use href="#i-arrow"/></svg></span><span><svg><use href="#i-blur"/></svg></span><span><svg><use href="#i-text"/></svg></span><span><svg><use href="#i-crop"/></svg></span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Record the screen, free</h3>
+        <p>Record an area, a window, the whole screen or one browser tab, with system audio and your microphone when you want them.</p>
+        <div class="art">
+          <div class="rec-art" aria-hidden="true">
+            <span class="rec-chip"><i></i>REC 00:12</span>
+            <div class="rec-frame"><b>3</b></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid2" style="margin-top:20px">
+      <article class="card" style="min-height:340px">
+        <h3>Saved where you want it</h3>
+        <p>Keep captures on the clipboard only, or save each one to Pictures, your Desktop or any folder you choose.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-screen"/></svg>Desktop</div>
+            <div class="on"><svg><use href="#i-image"/></svg>Pictures/RightShot<em>Default</em></div>
+            <div><svg><use href="#i-folder"/></svg>Choose Folder…</div>
+          </div>
+        </div>
+      </article>
+      <article class="card" style="min-height:340px">
+        <h3>Stays out of your way</h3>
+        <p>Pick apps where the right button is left alone, such as games and 3D tools, or only start a capture while you hold a key.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-lock"/></svg>Start right-drag<em>No key</em></div>
+            <div><svg><use href="#i-window"/></svg>Leave right-drag alone in<em>Unity, Rhino</em></div>
+            <div><svg><use href="#i-check"/></svg>Quick right-click works as usual</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="pro">
+    <div class="pro-band">
+      <p class="eyebrow" style="color:rgba(255,255,255,.6)">RightShot Pro</p>
+      <h2 class="big">Turn captures into finished work</h2>
+      <p class="sub">Try every Pro tool free for 14 days, then keep them with one purchase. No subscription.</p>
+      <div class="pro-grid">
+        <div class="pro-item"><h4><svg><use href="#i-film"/></svg>Recording Studio</h4><p>Trim, crop away empty sides, and frame a recording on a background before you export it.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-stack"/></svg>Save as GIF</h4><p>Turn a recording into a GIF that fits in a chat, a doc or a pull request.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-list"/></svg>Create Guide</h4><p>Mark steps while you record, or collect screenshots, then save a numbered guide as a PDF or copy its steps as Markdown.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-frame"/></svg>Studio</h4><p>Present a screenshot on a gradient with padding, rounded corners, a shadow and your watermark.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-eyeoff"/></svg>Auto Redact</h4><p>Finds faces, email addresses, phone, account and card numbers, and covers them in one click. On your Mac.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-scan"/></svg>Copy Text</h4><p>Drag over any text on screen, even in an image or a video, and paste it as plain text.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap center" id="pricing">
+    <h2 class="big">Pricing</h2>
+    <div class="price-grid">
+      <div class="price">
+        <span class="name">RightShot</span>
+        <div class="amount">Free</div>
+        <span class="when">Forever, no account</span>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Right-drag capture and the hold menu</li>
+          <li><svg><use href="#i-check"/></svg>Area, window, full screen, previous area and timed capture</li>
+          <li><svg><use href="#i-check"/></svg>The editor: boxes, arrows, steps, text, blur, redact and crop</li>
+          <li><svg><use href="#i-check"/></svg>Screen and tab recording</li>
+          <li><svg><use href="#i-check"/></svg>Full-page browser capture</li>
+          <li><svg><use href="#i-check"/></svg>Auto-save and recent screenshots</li>
+        </ul>
+        <a class="btn btn-line" href="#download">Download</a>
+      </div>
+      <div class="price pro">
+        <span class="name">RightShot Pro</span>
+        <div class="amount">$19<small>one time</small></div>
+        <span class="when">14-day free trial first</span>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Everything in RightShot</li>
+          <li><svg><use href="#i-check"/></svg>Recording Studio and Save as GIF</li>
+          <li><svg><use href="#i-check"/></svg>Create Guide, with Mark Step while recording</li>
+          <li><svg><use href="#i-check"/></svg>Studio backgrounds and watermarks</li>
+          <li><svg><use href="#i-check"/></svg>Auto Redact</li>
+          <li><svg><use href="#i-check"/></svg>Copy Text</li>
+        </ul>
+        <a class="btn btn-dark" href="#download">Start free trial</a>
+      </div>
+    </div>
+    <div class="note-bar"><svg aria-hidden="true"><use href="#i-lock"/></svg><span>One purchase through the Mac App Store, priced in your currency. Restore it on any Mac with the same Apple Account.</span></div>
+  </section>
+
+  <section class="wrap" id="download">
+    <div class="split">
+      <div>
+        <h2 class="big">Download RightShot</h2>
+        <p style="color:var(--muted);margin-top:18px">Apple silicon and Intel Macs, macOS 26 or later.</p>
+      </div>
+      <div class="dl">
+        <div class="row"><img class="ico" src="assets/icon-256.png" alt=""><div><b>Mac App Store</b><small>Coming soon</small></div><svg class="go" aria-hidden="true"><use href="#i-down"/></svg></div>
+        <div class="row"><svg class="ico" style="padding:8px;color:var(--ink-2)" aria-hidden="true"><use href="#i-puzzle"/></svg><div><b>Browser extension</b><small>Chrome, Brave and Edge, for full-page capture and tab recording</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="faq">
+    <div class="split">
+      <h2 class="big">FAQs</h2>
+      <div class="faq">
+        <details open>
+          <summary>Will I lose my normal right-click?</summary>
+          <p>No. A quick right-click goes straight to the app you're in, as it always has. RightShot only acts when you drag with the right button held, or hold it still for about half a second.</p>
+        </details>
+        <details>
+          <summary>What permissions does RightShot need?</summary>
+          <p>Screen Recording, so it can capture what's on screen. Right-drag also needs Accessibility, so RightShot can tell a right-drag from a right-click. You can capture from the menu bar with Screen Recording alone.</p>
+        </details>
+        <details>
+          <summary>Does anything leave my Mac?</summary>
+          <p>No. Captures, recordings, text recognition and Auto Redact all run on your Mac. There's no account, no analytics and no RightShot server. Purchases go through the Mac App Store. See the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>What's free and what's Pro?</summary>
+          <p>Capturing, editing, recording and full-page browser capture are free. Pro adds Recording Studio, GIFs, Create Guide, Studio, Auto Redact and Copy Text.</p>
+        </details>
+        <details>
+          <summary>How does the free trial work?</summary>
+          <p>Choose Start Free Trial on any Pro tool. You get every Pro tool for 14 days, and nothing is charged. When it ends, Pro tools ask you to unlock them, and everything free keeps working.</p>
+        </details>
+        <details>
+          <summary>Does it work with a trackpad?</summary>
+          <p>Yes. On supported trackpads, press with two fingers and drag. Capture Area in the menu bar works with a one-finger drag too.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./" style="font-size:15px"><img src="assets/icon-256.png" alt="" style="width:22px;height:22px">RightShot</a>
+    <span>&copy; 2026 Edniroya Ltd</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:hello@edniroya.com">hello@edniroya.com</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
