@@ -72,37 +72,9 @@
     </div>
 
     <div class="demo">
-      <div class="window" id="stage" role="img" aria-label="Animation: a pointer right-drags across a chart, a capture box appears, the annotation toolbar opens and the capture is copied.">
-        <div class="window-bar"><i></i><i></i><i></i><span class="title">Quarterly review</span></div>
-        <div class="doc">
-          <div class="doc-side"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="doc-main">
-            <div class="h"></div>
-            <div class="l"></div><div class="l s"></div>
-            <div class="chart-card" id="target">
-              <div class="t">Weekly sign-ups <em>Last 8 weeks</em></div>
-              <div class="bars"><b style="height:34%"></b><b style="height:48%"></b><b style="height:42%"></b><b style="height:61%"></b><b style="height:55%"></b><b style="height:72%"></b><b style="height:66%"></b><b style="height:90%"></b></div>
-            </div>
-          </div>
-        </div>
-        <div class="sel" id="sel"></div>
-        <svg class="arrow-mark" id="mark" width="80" height="60" viewBox="0 0 80 60" aria-hidden="true"><path d="M6 54C28 50 46 36 66 12" fill="none" stroke="#e2483d" stroke-width="4" stroke-linecap="round"/><path d="M52 12l15-1-2 15" fill="none" stroke="#e2483d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="toolbar" id="bar">
-          <span><svg><use href="#i-pointer"/></svg></span>
-          <span><svg><use href="#i-rect"/></svg></span>
-          <span id="arrowTool"><svg><use href="#i-arrow"/></svg></span>
-          <span><svg><use href="#i-blur"/></svg></span>
-          <span><svg><use href="#i-text"/></svg></span>
-          <span><svg><use href="#i-crop"/></svg></span>
-          <hr>
-          <span><svg><use href="#i-copy"/></svg></span>
-          <span><svg><use href="#i-check"/></svg></span>
-        </div>
-        <div class="toast" id="toast">Copied</div>
-        <div class="cursor" id="cursor">
-          <svg width="22" height="28" viewBox="0 0 22 28" aria-hidden="true"><path d="M2 2v21l5.5-5.2 3.7 8 3.6-1.6-3.6-7.8H19z" fill="#0b0b0c" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <span class="tag">Right-drag</span>
-        </div>
+      <div class="film" id="film">
+        <video id="filmVideo" src="assets/rightshot-film.mp4" poster="assets/film-poster.jpg" preload="none" playsinline aria-label="RightShot film: right-drag to capture, edit in place, capture a whole web page, style it in Studio, and record any area."></video>
+        <button class="play" id="play" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>Play</button>
       </div>
     </div>
   </div>
@@ -120,50 +92,25 @@
       <article class="card">
         <h3>Hold for the menu</h3>
         <p>Keep the right button still for half a second and every capture is beside your pointer: area, window, full screen, text and recording.</p>
-        <div class="art">
-          <div class="menu-art" aria-hidden="true">
-            <small>RightShot</small>
-            <div class="on"><svg><use href="#i-scan"/></svg>Capture Area…</div>
-            <div><svg><use href="#i-window"/></svg>Capture Window…</div>
-            <div><svg><use href="#i-screen"/></svg>Capture Full Screen</div>
-            <div><svg><use href="#i-redo"/></svg>Capture Previous Area</div>
-            <hr>
-            <div><svg><use href="#i-record"/></svg>Record Area…</div>
-          </div>
-        </div>
+        <div class="art"><img class="shot" src="assets/shot-menu.jpg" alt="The RightShot menu beside the pointer, with Record Area selected." loading="lazy"></div>
       </article>
 
       <article class="card">
         <h3>Whole web pages, top to bottom</h3>
         <p>The companion extension for Chrome, Brave and Edge captures a full page in one go, then opens it in the editor, ready to mark up.</p>
-        <div class="art">
-          <div class="page-art" aria-hidden="true">
-            <div class="ext"><b>RightShot</b><span class="on">Capture Full Page</span><span>Record This Tab…</span></div>
-            <div class="long"><i class="s"></i><i class="img"></i><i></i><i class="s"></i><i></i><i class="img"></i><i class="s"></i><i></i><i></i><i class="s"></i></div>
-          </div>
-        </div>
+        <div class="art"><img class="shot" src="assets/shot-page.jpg" alt="A full web page captured top to bottom and opened in the RightShot editor." loading="lazy"></div>
       </article>
 
       <article class="card">
         <h3>Mark it up where you took it</h3>
         <p>Boxes, arrows, numbered steps, text, highlighter, blur and redact appear right under the capture. Every edit updates your clipboard.</p>
-        <div class="art">
-          <div class="tools-art" aria-hidden="true">
-            <div class="shot"><span class="row" style="top:22px;width:40%"></span><span class="row" style="top:42px;right:150px"></span><span class="row" style="top:60px;right:170px"></span><span class="blur"></span><span class="box"></span><span class="num">1</span></div>
-            <div class="bar"><span><svg><use href="#i-pointer"/></svg></span><span class="on"><svg><use href="#i-rect"/></svg></span><span><svg><use href="#i-arrow"/></svg></span><span><svg><use href="#i-blur"/></svg></span><span><svg><use href="#i-text"/></svg></span><span><svg><use href="#i-crop"/></svg></span></div>
-          </div>
-        </div>
+        <div class="art"><img class="shot" src="assets/shot-markup.jpg" alt="A capture of a dashboard with its selection handles and the RightShot toolbar underneath." loading="lazy"></div>
       </article>
 
       <article class="card">
         <h3>Record the screen, free</h3>
         <p>Record an area, a window, the whole screen or one browser tab, with system audio and your microphone when you want them.</p>
-        <div class="art">
-          <div class="rec-art" aria-hidden="true">
-            <span class="rec-chip"><i></i>REC 00:12</span>
-            <div class="rec-frame"><b>3</b></div>
-          </div>
-        </div>
+        <div class="art"><img class="shot" src="assets/shot-record.jpg" alt="An area being selected on a web page for recording, with its size shown." loading="lazy"></div>
       </article>
     </div>
 
@@ -182,13 +129,7 @@
       <article class="card" style="min-height:340px">
         <h3>Stays out of your way</h3>
         <p>Pick apps where the right button is left alone, such as games and 3D tools, or only start a capture while you hold a key.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-lock"/></svg>Start right-drag<em>No key</em></div>
-            <div><svg><use href="#i-window"/></svg>Leave right-drag alone in<em>Unity, Rhino</em></div>
-            <div><svg><use href="#i-check"/></svg>Quick right-click works as usual</div>
-          </div>
-        </div>
+        <div class="art"><img class="shot" src="assets/shot-settings.jpg" alt="RightShot Settings, Capture tab: Start right-drag set to No key, and the list of apps where right-drag is left alone." loading="lazy"></div>
       </article>
     </div>
   </section>
@@ -198,6 +139,7 @@
       <p class="eyebrow" style="color:rgba(255,255,255,.6)">RightShot Pro</p>
       <h2 class="big">Turn captures into finished work</h2>
       <p class="sub">Try every Pro tool free for 14 days, then keep them with one purchase. No subscription.</p>
+      <img class="pro-shot" src="assets/shot-studio.jpg" alt="RightShot Studio framing a screenshot on an orange gradient, with background, padding and watermark controls." loading="lazy">
       <div class="pro-grid">
         <div class="pro-item"><h4><svg><use href="#i-film"/></svg>Recording Studio</h4><p>Trim, crop away empty sides, and frame a recording on a background before you export it.</p></div>
         <div class="pro-item"><h4><svg><use href="#i-stack"/></svg>Save as GIF</h4><p>Turn a recording into a GIF that fits in a chat, a doc or a pull request.</p></div>
