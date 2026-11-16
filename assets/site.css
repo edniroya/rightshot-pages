@@ -89,12 +89,21 @@ a { color: inherit; }
 .demo { margin: 48px auto 0; max-width: 1080px; }
 .film { position: relative; border-radius: var(--r-card); overflow: hidden; background: #0d1d3a; aspect-ratio: 16 / 9; box-shadow: 0 30px 80px -40px rgba(18, 40, 74, 0.45); }
 .film video { width: 100%; height: 100%; display: block; object-fit: cover; }
-.play { position: absolute; left: 32px; bottom: 28px; display: inline-flex; align-items: center; gap: 12px; padding: 0; border: 0; background: none; color: #fff; font: 500 clamp(28px, 4vw, 44px)/1 var(--font); letter-spacing: -0.02em; cursor: pointer; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35); }
-.play svg { width: 0.7em; height: 0.7em; }
-.play:hover { opacity: 0.85; }
+.play, .sound {
+  position: absolute; z-index: 2; display: inline-flex; align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22); border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.14); color: #fff; cursor: pointer;
+  backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  transition: background .15s, transform .1s;
+}
+.play:hover, .sound:hover { background: rgba(255, 255, 255, 0.24); }
+.play:active, .sound:active { transform: scale(0.97); }
+.play { right: 24px; bottom: 24px; height: 52px; gap: 10px; padding: 0 22px 0 7px; font: 500 16px/1 var(--font); }
+.play .disc { width: 38px; height: 38px; border-radius: 50%; background: #fff; color: var(--ink); display: grid; place-items: center; }
+.play .disc svg { width: 16px; height: 16px; margin-left: 2px; }
+.play small { font-size: 14px; color: rgba(255, 255, 255, 0.7); font-weight: 400; }
 .film.playing .play { display: none; }
-.sound { position: absolute; right: 20px; top: 20px; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px 0 11px; border: 0; border-radius: var(--r-pill); background: rgba(11, 11, 12, 0.55); color: #fff; font: 500 14px/1 var(--font); cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-.sound:hover { background: rgba(11, 11, 12, 0.72); }
+.sound { right: 24px; top: 24px; height: 38px; gap: 8px; padding: 0 14px 0 11px; font: 500 14px/1 var(--font); }
 .sound svg { width: 18px; height: 18px; }
 .sound .cross { display: none; }
 .sound.off .cross { display: inline; }
@@ -210,7 +219,9 @@ footer a:hover { color: var(--ink); }
   .wrap { padding: 0 16px; }
   .nav-actions .btn-soft { display: none; }
   .hero { padding-top: 44px; }
-  .play { left: 18px; bottom: 16px; }
+  .play { right: 14px; bottom: 14px; height: 46px; font-size: 15px; }
+  .play small { display: none; }
+  .sound { right: 14px; top: 14px; }
   .pro-grid { grid-template-columns: 1fr; }
   .card { padding: 24px 22px 0; min-height: 0; }
   .card .art { transform: scale(0.9); transform-origin: bottom center; }
