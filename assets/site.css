@@ -166,10 +166,14 @@ section.wrap { margin-top: 160px; scroll-margin-top: 84px; }
 .dl { display: grid; gap: 12px; }
 .dl a, .dl div.row { display: flex; align-items: center; gap: 16px; background: var(--card); border-radius: 20px; padding: 20px 24px; text-decoration: none; }
 .dl a:hover { background: var(--card-2); }
-.dl .ico { width: 40px; height: 40px; flex: none; }
+.dl .badge-slot { width: 190px; flex: none; display: flex; align-items: center; }
+.dl .badge { height: 48px; width: auto; border-radius: 8px; }
+@media (max-width: 560px) {
+  .dl div.row, .dl a { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .dl .badge-slot { width: auto; }
+}
 .dl b { display: block; font-weight: 500; font-size: 16px; }
 .dl small { color: var(--muted); font-size: 14px; }
-.dl .go { margin-left: auto; width: 18px; height: 18px; color: var(--muted); }
 
 /* FAQ */
 .faq details { border-bottom: 1px solid var(--line); }
