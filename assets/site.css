@@ -87,7 +87,7 @@ a { color: inherit; }
 
 /* Film */
 .demo { margin: 48px auto 0; max-width: 1080px; }
-.film { position: relative; border-radius: var(--r-card); overflow: hidden; background: #0d1d3a; aspect-ratio: 16 / 9; box-shadow: 0 30px 80px -40px rgba(74, 87, 232, 0.45); }
+.film { position: relative; border-radius: var(--r-card); overflow: hidden; background: #837ff0; aspect-ratio: 16 / 9; box-shadow: 0 30px 80px -40px rgba(74, 87, 232, 0.45); }
 .film video { width: 100%; height: 100%; display: block; object-fit: cover; }
 .play, .sound {
   position: absolute; z-index: 2; display: inline-flex; align-items: center;
