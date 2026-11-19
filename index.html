@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261119a">
+<link rel="stylesheet" href="assets/site.css?v=20261120a">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -40,6 +40,11 @@
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 7h10M10 12h10M10 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 6l1.5-1v4M4 12.5c.4-.8 2.5-1 2.4.2 0 .9-2.4 1.8-2.4 2.8h2.6M4.2 17h2.3l-1.2 1.2c1 0 1.5.5 1.2 1.3-.3.7-1.6.7-2.3.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="7" y="8" width="10" height="8" rx="1" fill="currentColor" opacity=".35"/></symbol>
     <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="12.5" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 10.5L21 7.5v9l-5.5-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 4h6l-1 5 3.5 3.5v1.5h-11v-1.5L10 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 018 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   </defs>
 </svg>
@@ -97,7 +102,7 @@
 
       <article class="card">
         <h3>Whole web pages, top to bottom</h3>
-        <p>The free extension works on any computer: a full page, part of one, an area or what's on screen, to copy or download. With RightShot for Mac: the editor, Record This Tab, Capture Scrolling Panel (Pro).</p>
+        <p>The free extension works on any computer: a full page, part of one, an area or what's on screen, to copy or download. With RightShot for Mac: the editor, Record This Tab, Capture Scrolling Area (Pro).</p>
         <div class="art"><img class="shot" src="assets/shot-page.jpg" alt="A full web page captured top to bottom and opened in the RightShot editor." loading="lazy"></div>
       </article>
 
@@ -132,6 +137,60 @@
         <div class="art"><img class="shot" src="assets/shot-settings.jpg" alt="RightShot Settings, Capture tab: Start right-drag set to No key, and the list of apps where right-drag is left alone." loading="lazy"></div>
       </article>
     </div>
+
+    <div class="grid2" style="margin-top:20px">
+      <article class="card" style="min-height:340px">
+        <h3>Your captures, within reach</h3>
+        <p>After each capture, a card in the corner to copy, save, edit or drag. Or the shelf: your last 30 captures and recordings along the top of the screen. Pin the ones you need again.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-copy"/></svg>Click to copy</div>
+            <div><svg><use href="#i-pointer"/></svg>Drag into any app</div>
+            <div class="on"><svg><use href="#i-image"/></svg>Space to preview</div>
+            <div><svg><use href="#i-pin"/></svg>Pin to keep it close</div>
+          </div>
+        </div>
+      </article>
+      <article class="card" style="min-height:340px">
+        <h3>Copy Text, free</h3>
+        <p>Drag over anything on screen, even a picture or a video, and paste its words as plain text. The text is read on your Mac.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-rect"/></svg>Capture Area</div>
+            <div><svg><use href="#i-window"/></svg>Capture Window</div>
+            <div><svg><use href="#i-screen"/></svg>Capture Full Screen</div>
+            <div class="on"><svg><use href="#i-scan"/></svg>Copy Text</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid2" style="margin-top:20px">
+      <article class="card" style="min-height:340px">
+        <h3>Right-click any web page</h3>
+        <p>In Chrome, Brave or Edge, right-click and choose RightShot, or press Option+Shift (Alt+Shift on Windows) with a letter. Without the Mac app, a capture opens in a tab to copy or download.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-screen"/></svg>Capture Full Page<em>&#8997;&#8679;P</em></div>
+            <div class="on"><svg><use href="#i-frame"/></svg>Capture Section<em>&#8997;&#8679;E</em></div>
+            <div><svg><use href="#i-crop"/></svg>Capture Area<em>&#8997;&#8679;A</em></div>
+            <div><svg><use href="#i-window"/></svg>Capture Visible Page<em>&#8997;&#8679;V</em></div>
+          </div>
+        </div>
+      </article>
+      <article class="card" style="min-height:340px">
+        <h3>Precise when you need it</h3>
+        <p>Timed capture, a magnifier for pixel-exact edges and keyboard shortcuts you can change. Save as PNG or PDF, and record MP4 or MOV at up to 60 frames per second.</p>
+        <div class="art">
+          <div class="save-art" aria-hidden="true">
+            <div><svg><use href="#i-clock"/></svg>Timed Capture</div>
+            <div class="on"><svg><use href="#i-zoom"/></svg>Magnifier</div>
+            <div><svg><use href="#i-down"/></svg>Save as PNG or PDF</div>
+            <div><svg><use href="#i-record"/></svg>MP4 or MOV, 60 fps</div>
+          </div>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section class="wrap" id="pro">
@@ -141,12 +200,14 @@
       <p class="sub">Try every Pro tool free for 14 days, then keep them with one purchase. No subscription.</p>
       <img class="pro-shot" src="assets/shot-studio.jpg" alt="RightShot Studio framing a screenshot on an orange gradient, with background, padding and watermark controls." loading="lazy">
       <div class="pro-grid">
-        <div class="pro-item"><h4><svg><use href="#i-film"/></svg>Recording Studio</h4><p>Trim, crop away empty sides, and frame a recording on a background before you export it.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-film"/></svg>Recording Studio</h4><p>Zoom in where you click, a bigger cursor and click rings, and speed up or cut the moments the mouse is still. Trim, crop, frame on a background and export at 1080p for social.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-camera"/></svg>Camera bubble</h4><p>Show yourself in a corner of your recordings with your camera.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-scan"/></svg>Scrolling Capture</h4><p>Drag over a chat, a document or a long list in any app, scroll, and get one tall screenshot. In the browser extension too.</p></div>
         <div class="pro-item"><h4><svg><use href="#i-stack"/></svg>Save as GIF</h4><p>Turn a recording into a GIF that fits in a chat, a doc or a pull request.</p></div>
-        <div class="pro-item"><h4><svg><use href="#i-list"/></svg>Create Guide</h4><p>Mark steps while you record, or collect screenshots, then save a numbered guide as a PDF or copy its steps as Markdown.</p></div>
-        <div class="pro-item"><h4><svg><use href="#i-frame"/></svg>Studio</h4><p>Present a screenshot on a gradient with padding, rounded corners, a shadow and your watermark.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-list"/></svg>Create Guide</h4><p>Mark steps while you record, or collect screenshots, add captions, then save a numbered guide as a PDF or copy its steps as Markdown.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-frame"/></svg>Studio</h4><p>Present a screenshot on a gradient with padding, rounded corners, an adjustable shadow and your watermark.</p></div>
         <div class="pro-item"><h4><svg><use href="#i-eyeoff"/></svg>Auto Redact</h4><p>Finds faces, email addresses, phone, account and card numbers, and covers them in one click. On your Mac.</p></div>
-        <div class="pro-item"><h4><svg><use href="#i-scan"/></svg>Scrolling Capture</h4><p>Scroll through a long chat, document or settings list in any app and get it as one tall picture.</p></div>
+        <div class="pro-item"><h4><svg><use href="#i-search"/></svg>Shelf search</h4><p>Find any screenshot on the shelf by the words in it, and add screenshots to a guide in one step.</p></div>
       </div>
     </div>
   </section>
@@ -163,9 +224,9 @@
           <li><svg><use href="#i-check"/></svg>Area, window, full screen, previous area and timed capture</li>
           <li><svg><use href="#i-check"/></svg>The editor: boxes, arrows, steps, text, blur, redact and crop</li>
           <li><svg><use href="#i-check"/></svg>Screen and tab recording</li>
-          <li><svg><use href="#i-check"/></svg>Full-page browser capture</li>
+          <li><svg><use href="#i-check"/></svg>Browser extension: full page, section, area or visible page</li>
           <li><svg><use href="#i-check"/></svg>Copy Text: drag over any text on screen and paste it as plain text</li>
-          <li><svg><use href="#i-check"/></svg>Auto-save and recent screenshots</li>
+          <li><svg><use href="#i-check"/></svg>The capture card, auto-save and the shelf of your last 30</li>
         </ul>
         <a class="btn btn-line" href="#download">Download</a>
       </div>
@@ -175,11 +236,13 @@
         <span class="when">14-day free trial first</span>
         <ul>
           <li><svg><use href="#i-check"/></svg>Everything in RightShot</li>
-          <li><svg><use href="#i-check"/></svg>Recording Studio and Save as GIF</li>
+          <li><svg><use href="#i-check"/></svg>Recording Studio: zoom on clicks, click rings, cut still moments, 1080p export</li>
+          <li><svg><use href="#i-check"/></svg>Camera bubble and Save as GIF</li>
           <li><svg><use href="#i-check"/></svg>Create Guide, with Mark Step while recording</li>
-          <li><svg><use href="#i-check"/></svg>Studio backgrounds and watermarks</li>
+          <li><svg><use href="#i-check"/></svg>Studio backgrounds, adjustable shadow and watermarks</li>
           <li><svg><use href="#i-check"/></svg>Auto Redact</li>
-          <li><svg><use href="#i-check"/></svg>Scrolling Capture</li>
+          <li><svg><use href="#i-check"/></svg>Scrolling Capture, in any app and in the browser</li>
+          <li><svg><use href="#i-check"/></svg>Shelf search and Add to Guide</li>
         </ul>
         <a class="btn btn-dark" href="#download">Start free trial</a>
       </div>
@@ -218,7 +281,7 @@
         </details>
         <details>
           <summary>What's free and what's Pro?</summary>
-          <p>Capturing, editing, recording, Copy Text and full-page browser capture are free. Pro adds Recording Studio, Scrolling Capture, GIFs, Create Guide, Studio and Auto Redact.</p>
+          <p>Capturing, editing, recording, Copy Text, the shelf and the browser extension are free. Pro adds Recording Studio, the camera bubble, Scrolling Capture, GIFs, Create Guide, Studio, Auto Redact and shelf search.</p>
         </details>
         <details>
           <summary>How does the free trial work?</summary>
