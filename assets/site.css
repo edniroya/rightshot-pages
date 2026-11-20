@@ -115,7 +115,6 @@ section.wrap { margin-top: 128px; scroll-margin-top: 84px; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .big { font-weight: 500; letter-spacing: -0.01em; font-size: clamp(28px, 3.4vw, 36px); line-height: 1.12; margin: 0; }
 .split p { margin: 0 0 14px; font-size: 17px; line-height: 1.65; color: var(--ink-2); }
-.eyebrow { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
 
 .panel { background: #fff; border: 1px solid var(--line); border-bottom: 0; border-radius: var(--r-inner) var(--r-inner) 0 0; padding: 18px; }
 
@@ -150,19 +149,22 @@ section.wrap { margin-top: 128px; scroll-margin-top: 84px; }
   .facts { margin-top: 40px; }
 }
 
-/* Pro band */
+/* Pro */
+.pro-row { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.pro-row dt { font-size: 14px; font-weight: 500; color: var(--ink); }
+.pro-row dd { margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+.pro-pic { width: 100%; display: block; border-radius: 12px; border: 1px solid var(--line); }
+@media (max-width: 600px) { .pro-row { grid-template-columns: 1fr; gap: 4px; } }
 
-.pro-band { border-radius: var(--r-card); background: linear-gradient(140deg, #f4f5ff 0%, var(--peri-tint) 55%, #e2e6ff 100%); color: var(--ink); padding: 56px 48px 48px; position: relative; overflow: hidden; }
-.pro-band::after { content: ""; position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(139, 151, 255, 0.30), transparent 65%); }
-.pro-band .big { color: var(--ink); max-width: 14ch; }
-.pro-band .sub { color: var(--ink-2); font-size: 17px; line-height: 1.65; max-width: 52ch; margin: 14px 0 0; }
-.pro-shot { position: relative; z-index: 1; width: 100%; margin-top: 36px; border-radius: 16px; border: 1px solid #d9ddff; }
-.pro-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 36px; }
-@media (max-width: 1100px) { .pro-grid { grid-template-columns: 1fr 1fr; } }
-.pro-item { background: #fff; border: 1px solid #dfe2ff; border-radius: 16px; padding: 20px; }
-.pro-item h4 { margin: 0; font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
-.pro-item h4 svg { width: 16px; height: 16px; color: var(--peri); }
-.pro-item p { margin: 6px 0 0; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.pro-b { background: var(--card); border-radius: var(--r-card); padding: 48px; }
+.pro-b-head { display: grid; grid-template-columns: 5fr 6fr; gap: 56px; align-items: end; }
+.pro-lede { margin: 0; font-size: 17px; line-height: 1.65; color: var(--ink-2); }
+.pro-b-pic { margin-top: 32px; border-radius: 12px; overflow: hidden; aspect-ratio: 1400 / 560; border: 1px solid var(--line); }
+.pro-b-pic .pro-pic { border: 0; border-radius: 0; height: 100%; object-fit: cover; object-position: center 35%; }
+.pro-b-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 28px; }
+.pro-b .pro-dl { margin: 0; border-top: 1px solid #d6d6da; }
+.pro-b .pro-row { border-bottom-color: #d6d6da; }
+@media (max-width: 900px) { .pro-b { padding: 32px 22px; } .pro-b-head { grid-template-columns: 1fr; gap: 14px 0; } .pro-b-cols { grid-template-columns: 1fr; gap: 0; } .pro-b .pro-dl + .pro-dl { border-top: 0; } .pro-b-pic { aspect-ratio: 1400 / 678; } }
 
 /* Pricing */
 .center { text-align: center; }
@@ -232,8 +234,6 @@ footer a:hover { color: var(--ink); }
   .nav .wrap { gap: 12px; }
   .brand { margin-right: auto; }
   .split, .price-grid { grid-template-columns: 1fr; }
-  .pro-grid { grid-template-columns: 1fr 1fr; }
-  .pro-band { padding: 40px 22px 26px; }
   section.wrap { margin-top: 96px; }
 }
 @media (max-width: 600px) {
@@ -244,7 +244,6 @@ footer a:hover { color: var(--ink); }
   .play { right: 12px; bottom: 12px; height: 40px; font-size: 14px; }
   .play small { display: none; }
   .sound { right: 12px; top: 12px; }
-  .pro-grid { grid-template-columns: 1fr; }
   .price { padding: 24px; }
   footer nav { margin-left: 0; }
 }
