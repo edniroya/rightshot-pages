@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20261120a">
+<link rel="stylesheet" href="assets/site.css?v=20261120d">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -41,10 +41,8 @@
     <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="7" y="8" width="10" height="8" rx="1" fill="currentColor" opacity=".35"/></symbol>
     <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 15l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="12.5" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 10.5L21 7.5v9l-5.5-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 4h6l-1 5 3.5 3.5v1.5h-11v-1.5L10 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 14v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 018 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   </defs>
 </svg>
@@ -93,103 +91,30 @@
       </div>
     </div>
 
-    <div class="grid2">
-      <article class="card">
-        <h3>Hold for the menu</h3>
-        <p>Keep the right button still for half a second and every capture is beside your pointer: area, window, full screen, text and recording.</p>
-        <div class="art"><img class="shot" src="assets/shot-menu.jpg" alt="The RightShot menu beside the pointer, with Record Area selected." loading="lazy"></div>
-      </article>
-
-      <article class="card">
-        <h3>Whole web pages, top to bottom</h3>
-        <p>The free extension works on any computer: a full page, part of one, an area or what's on screen, to copy or download. With RightShot for Mac: the editor, Record This Tab, Capture Scrolling Area (Pro).</p>
-        <div class="art"><img class="shot" src="assets/shot-page.jpg" alt="A full web page captured top to bottom and opened in the RightShot editor." loading="lazy"></div>
-      </article>
-
-      <article class="card">
-        <h3>Mark it up where you took it</h3>
-        <p>Boxes, arrows, numbered steps, text, highlighter, blur and redact appear right under the capture. Every edit updates your clipboard.</p>
-        <div class="art"><img class="shot" src="assets/shot-markup.jpg" alt="A capture of a dashboard with its selection handles and the RightShot toolbar underneath." loading="lazy"></div>
-      </article>
-
-      <article class="card">
-        <h3>Record the screen, free</h3>
-        <p>Record an area, a window, the whole screen or one browser tab, with system audio and your microphone when you want them.</p>
-        <div class="art"><img class="shot" src="assets/shot-record.jpg" alt="An area being selected on a web page for recording, with its size shown." loading="lazy"></div>
-      </article>
+    <div class="showcase">
+      <div class="show-tabs">
+        <button class="show-tab on" type="button" aria-pressed="true" data-i="0"><b>Right-drag and mark up</b><span>Release, and the capture is on your clipboard with boxes, arrows, numbered steps, text, highlighter, blur and redact right under it. Every edit updates the clipboard.</span></button>
+        <button class="show-tab" type="button" aria-pressed="false" data-i="1"><b>Hold for the menu</b><span>Keep the right button still for half a second and every capture is beside your pointer: area, window, full screen, text and recording.</span></button>
+        <button class="show-tab" type="button" aria-pressed="false" data-i="2"><b>Whole web pages</b><span>The free extension captures a full page, a section, an area or what's on screen, to copy or download, on any computer. With RightShot for Mac: the editor, Record This Tab and Capture Scrolling Area (Pro).</span></button>
+        <button class="show-tab" type="button" aria-pressed="false" data-i="3"><b>Record the screen, free</b><span>An area, a window, the whole screen or one browser tab, with system audio and your microphone when you want them.</span></button>
+        <button class="show-tab" type="button" aria-pressed="false" data-i="4"><b>Stays out of your way</b><span>Pick apps where the right button is left alone, such as games and 3D tools, or only start a capture while you hold a key.</span></button>
+      </div>
+      <div class="stage">
+        <img class="on" src="assets/shot-markup.jpg" alt="A capture of a dashboard with its selection handles and the RightShot toolbar underneath." loading="lazy" data-i="0">
+        <img class="tall" src="assets/shot-menu.jpg" alt="The RightShot menu beside the pointer, with Record Area selected." loading="lazy" data-i="1" aria-hidden="true">
+        <img src="assets/shot-page.jpg" alt="A full web page captured top to bottom and opened in the RightShot editor." loading="lazy" data-i="2" aria-hidden="true">
+        <img src="assets/shot-record.jpg" alt="An area being selected on a web page for recording, with its size shown." loading="lazy" data-i="3" aria-hidden="true">
+        <img src="assets/shot-settings.jpg" alt="RightShot Settings, Capture tab: Start right-drag set to No key, and the list of apps where right-drag is left alone." loading="lazy" data-i="4" aria-hidden="true">
+      </div>
     </div>
 
-    <div class="grid2" style="margin-top:20px">
-      <article class="card" style="min-height:340px">
-        <h3>Saved where you want it</h3>
-        <p>Keep captures on the clipboard only, or save each one to Pictures, your Desktop or any folder you choose.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-screen"/></svg>Desktop</div>
-            <div class="on"><svg><use href="#i-image"/></svg>Pictures/RightShot<em>Default</em></div>
-            <div><svg><use href="#i-folder"/></svg>Choose Folder…</div>
-          </div>
-        </div>
-      </article>
-      <article class="card" style="min-height:340px">
-        <h3>Stays out of your way</h3>
-        <p>Pick apps where the right button is left alone, such as games and 3D tools, or only start a capture while you hold a key.</p>
-        <div class="art"><img class="shot" src="assets/shot-settings.jpg" alt="RightShot Settings, Capture tab: Start right-drag set to No key, and the list of apps where right-drag is left alone." loading="lazy"></div>
-      </article>
-    </div>
-
-    <div class="grid2" style="margin-top:20px">
-      <article class="card" style="min-height:340px">
-        <h3>Your captures, within reach</h3>
-        <p>After each capture, a card in the corner to copy, save, edit or drag. Or the shelf: your last 30 captures and recordings along the top of the screen. Pin the ones you need again.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-copy"/></svg>Click to copy</div>
-            <div><svg><use href="#i-pointer"/></svg>Drag into any app</div>
-            <div class="on"><svg><use href="#i-image"/></svg>Space to preview</div>
-            <div><svg><use href="#i-pin"/></svg>Pin to keep it close</div>
-          </div>
-        </div>
-      </article>
-      <article class="card" style="min-height:340px">
-        <h3>Copy Text, free</h3>
-        <p>Drag over anything on screen, even a picture or a video, and paste its words as plain text. The text is read on your Mac.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-rect"/></svg>Capture Area</div>
-            <div><svg><use href="#i-window"/></svg>Capture Window</div>
-            <div><svg><use href="#i-screen"/></svg>Capture Full Screen</div>
-            <div class="on"><svg><use href="#i-scan"/></svg>Copy Text</div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="grid2" style="margin-top:20px">
-      <article class="card" style="min-height:340px">
-        <h3>Right-click any web page</h3>
-        <p>In Chrome, Brave or Edge, right-click and choose RightShot, or press Option+Shift (Alt+Shift on Windows) with a letter. Without the Mac app, a capture opens in a tab to copy or download.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-screen"/></svg>Capture Full Page<em>&#8997;&#8679;P</em></div>
-            <div class="on"><svg><use href="#i-frame"/></svg>Capture Section<em>&#8997;&#8679;E</em></div>
-            <div><svg><use href="#i-crop"/></svg>Capture Area<em>&#8997;&#8679;A</em></div>
-            <div><svg><use href="#i-window"/></svg>Capture Visible Page<em>&#8997;&#8679;V</em></div>
-          </div>
-        </div>
-      </article>
-      <article class="card" style="min-height:340px">
-        <h3>Precise when you need it</h3>
-        <p>Timed capture, a magnifier for pixel-exact edges and keyboard shortcuts you can change. Save as PNG or PDF, and record MP4 or MOV at up to 60 frames per second.</p>
-        <div class="art">
-          <div class="save-art" aria-hidden="true">
-            <div><svg><use href="#i-clock"/></svg>Timed Capture</div>
-            <div class="on"><svg><use href="#i-zoom"/></svg>Magnifier</div>
-            <div><svg><use href="#i-down"/></svg>Save as PNG or PDF</div>
-            <div><svg><use href="#i-record"/></svg>MP4 or MOV, 60 fps</div>
-          </div>
-        </div>
-      </article>
+    <div class="facts">
+      <div class="fact"><svg aria-hidden="true"><use href="#i-scan"/></svg><p><b>Copy Text, free.</b> Drag over anything on screen, even a picture or a video, and paste its words as plain text. Read on your Mac.</p></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-image"/></svg><p><b>A card, or the shelf.</b> After each capture, a card in the corner to copy, save, edit or drag. Or the shelf: your last 30 captures and recordings along the top of the screen. Click to copy, drag, Space to preview, pin.</p></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-folder"/></svg><p><b>Saved where you want it.</b> Clipboard only, or Pictures/RightShot by default, your Desktop or any folder you choose.</p></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-screen"/></svg><p><b>Right-click any web page.</b> In Chrome, Brave or Edge, right-click and choose RightShot, or press Option+Shift (Alt+Shift on Windows) with P for full page, E for section, A for area or V for visible page. Without the Mac app, a capture opens in a tab to copy or download.</p></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-clock"/></svg><p><b>Timed capture and a magnifier.</b> Pixel-exact edges, the previous area again, and shortcuts you can change.</p></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-down"/></svg><p><b>The formats you need.</b> PNG or PDF for captures. MP4 or MOV at up to 60 frames per second for recordings.</p></div>
     </div>
   </section>
 
@@ -309,6 +234,6 @@
     </nav>
   </div>
 </footer>
-<script src="assets/site.js?v=20261116d"></script>
+<script src="assets/site.js?v=20261120d"></script>
 </body>
 </html>
