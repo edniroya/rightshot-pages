@@ -7,6 +7,26 @@
   window.addEventListener("scroll", update, { passive: true });
 })();
 
+// On small screens the menu button opens the links as a list under the header.
+(function () {
+  var nav = document.querySelector(".nav");
+  var btn = document.querySelector(".menu-btn");
+  var menu = document.getElementById("nav-menu");
+  if (!nav || !btn || !menu) return;
+  function set(open) {
+    nav.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "Close menu" : "Menu");
+  }
+  btn.addEventListener("click", function () { set(!nav.classList.contains("open")); });
+  menu.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && nav.classList.contains("open")) { set(false); btn.focus(); }
+  });
+  document.addEventListener("click", function (e) { if (!nav.contains(e.target)) set(false); });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", function (m) { if (m.matches) set(false); });
+})();
+
 // The film loads only when someone presses Play, then shows the normal video controls.
 (function () {
   var film = document.getElementById("film");
