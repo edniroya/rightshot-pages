@@ -50,3 +50,18 @@
     if (started && started.catch) started.catch(function () {});
   });
 })();
+
+// Features showcase: each button shows its own screenshot.
+(function () {
+  var tabs = document.querySelectorAll('.show-tab');
+  var imgs = document.querySelectorAll('.stage img');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var i = t.getAttribute('data-i');
+      tabs.forEach(function (x) { var on = x === t; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      var stage = document.querySelector('.stage');
+      if (stage && stage.getBoundingClientRect().top < 64) stage.scrollIntoView({ block: 'start' });
+      imgs.forEach(function (im) { var on = im.getAttribute('data-i') === i; im.classList.toggle('on', on); if (on) im.removeAttribute('aria-hidden'); else im.setAttribute('aria-hidden', 'true'); });
+    });
+  });
+})();
