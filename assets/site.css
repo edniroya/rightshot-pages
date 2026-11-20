@@ -47,8 +47,8 @@ a { color: inherit; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; text-decoration: none; letter-spacing: -0.01em; }
 .brand img { width: 26px; height: 26px; }
 .nav-links { display: flex; gap: 24px; margin-right: auto; }
-.nav-links a { text-decoration: none; font-size: 13px; font-weight: 500; color: var(--ink-2); }
-.nav-links a:hover { color: var(--ink); }
+.nav-links a { text-decoration: none; font-size: 13px; font-weight: 500; color: var(--ink-2); white-space: nowrap; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ink); }
 .nav-actions { display: flex; gap: 6px; }
 .nav-actions .btn { height: 32px; padding: 0 14px; font-size: 13px; }
 
